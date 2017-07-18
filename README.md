@@ -4,7 +4,7 @@ Simple application, that presents a Click Counter and updates every the counter,
 
 ### Tecnologies
 
- Java(v8)
+- Java(v8)
 - Maven(v3)
 - Spring Boot(v1.5.2.RELEASE)
 - Mongo DB(v3.4.6)
