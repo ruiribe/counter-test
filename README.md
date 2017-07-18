@@ -1,5 +1,6 @@
 # counter-test
 Webapp - Click counter
+
 Simple application, that presents a Click Counter and updates every the counter, of every client connected to the app.
 
 ### Tecnologies
