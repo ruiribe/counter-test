@@ -10,19 +10,18 @@ public class CounterController {
 
 	@Autowired
 	private CounterRepository repository;
+	@Autowired
+	private CounterRepositoryCustom customRepository;
 
 	@MessageMapping("/counterincrement")
 	@SendTo("/topic/greetings")
-	public CounterValue greeting() throws Exception {
-		Counter counter = repository.findByCounterName("counter");
-		counter.setCounterValue(counter.counterValue + 1);
-		repository.save(counter);
-		return new CounterValue(counter.counterValue);
+	public long updateCounterValue() throws Exception {
+		return customRepository.updateOrCreate("counter");
 	}
-	
+
 	@MessageMapping("/countervalue")
 	@SendTo("/topic/greetings")
-	public CounterValue getCounterValue() throws Exception {
-		return new CounterValue(repository.findByCounterName("counter").counterValue);
+	public long getCounterValue() throws Exception {
+		return repository.findByCounterName("counter").getCounterValue();
 	}
 }

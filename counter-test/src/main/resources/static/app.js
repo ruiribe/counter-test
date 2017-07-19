@@ -4,8 +4,8 @@ function connect() {
     var socket = new SockJS('/gs-guide-websocket');
     stompClient = Stomp.over(socket);
     stompClient.connect({}, function (frame) {
-        stompClient.subscribe('/topic/greetings', function (greeting) {
-            updateCounter(JSON.parse(greeting.body).content);
+        stompClient.subscribe('/topic/greetings', function (counter) {
+            updateCounter(JSON.parse(counter.body));
         });
     });
     waitForSocketConnection(stompClient, getCounterValue);

@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Application implements CommandLineRunner {
 
 	@Autowired
-	private CounterRepository repository;
+	private CounterRepositoryCustom repository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
@@ -18,10 +18,7 @@ public class Application implements CommandLineRunner {
 	@Override
 	public void run(String... strings) throws Exception {
 
-		Counter counter = repository.findByCounterName("counter");
-
-		if (counter == null)
-			repository.save(new Counter("counter", 0l));
+		repository.updateOrCreate("counter");
 
 	}
 }
