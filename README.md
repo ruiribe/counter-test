@@ -22,4 +22,4 @@ Simple application, that presents a Click Counter and updates every the counter,
 
 ### Webapp URL
 
--http://[ip-docker-machine]
+- http://[ip-docker-machine]
