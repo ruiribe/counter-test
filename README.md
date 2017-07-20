@@ -22,15 +22,15 @@ Simple application, that presents a Click Counter and updates every the counter,
 - Docker Compose (https://docs.docker.com/compose/install/)
 
 #### Auto:
-...
+```
 sh startup.sh
-...
+```
 
 ### Manual
-...
+```
 mvn clean install -f ./counter-test/pom.xml
 docker-compose up
-...
+```
 
 ### Webapp URL
 
