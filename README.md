@@ -7,7 +7,7 @@ Simple application, that presents a Click Counter and updates every the counter,
 
 - Java(v8)
 - Maven(v3)
-- Spring Boot(v1.5.2.RELEASE)
+- Spring Boot(v1.5.3.RELEASE)
 - Mongo DB(v3.4.6)
 - Docker(17.06.0-ce)
 - Docker-compose(v1.13.0))
