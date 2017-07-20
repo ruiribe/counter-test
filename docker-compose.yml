@@ -2,8 +2,8 @@ version: '2'
 services:
   users:
     image: anapsix/alpine-java
-    #ports:
-    #- "91:9000"
+    ports:
+    - "80:9000"
     volumes:
     - /home/ubuntu/counter-test/counter-test/target/counter-test.jar:/home/ubuntu/counter-test/counter-test/target/counter-test.jar
     command: ["java","-jar","/home/ubuntu/counter-test/counter-test/target/counter-test.jar"]
