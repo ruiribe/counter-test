@@ -1,7 +1,7 @@
 var stompClient = null;
 
 function connect() {
-    var socket = new SockJS('/gs-guide-websocket');
+    var socket = new SockJS('/click-counter-websocket');
     stompClient = Stomp.over(socket);
     stompClient.connect({}, function (frame) {
         stompClient.subscribe('/topic/greetings', function (counter) {
@@ -15,7 +15,7 @@ function connect() {
 function waitForSocketConnection(socket, callback){
     setTimeout(
         function () {
-            if (socket.connected === true) {
+            if (socket != null && socket.connected === true) {
                 console.log("Connection is made")
                 if(callback != null){
                     callback();
@@ -30,7 +30,7 @@ function waitForSocketConnection(socket, callback){
 }
 
 function disconnect() {
-    if (stompClient != null) {
+    if (stompClient != null && stompClient.connected == true) {
         stompClient.disconnect();
     }
     console.log("Disconnected");
@@ -40,7 +40,7 @@ function getCounterValue() {
     stompClient.send("/app/countervalue", {}, null);
 }
 
-function sendName() {
+function click() {
     stompClient.send("/app/counterincrement", {}, null);
 }
 
@@ -52,5 +52,5 @@ $(function () {
     $("form").on('submit', function (e) {
         e.preventDefault();
     });
-    $( "#send" ).click(function() { sendName(); });
+    $( "#send" ).click(function() { click(); });
 });

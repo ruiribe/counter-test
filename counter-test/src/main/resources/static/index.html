@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hello WebSocket</title>
-    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/main.css" rel="stylesheet">
-    <script src="/webjars/jquery/jquery.min.js"></script>
-    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
-    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
-    <script src="/app.js"></script>
+<meta charset="UTF-8" /> 
+<title>Click Counter</title>
+<link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/main.css" rel="stylesheet">
+<script src="/webjars/jquery/jquery.min.js"></script>
+<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+<script src="/app.js"></script>
 </head>
 <body onload="connect()" onunload="disconnect()">
-<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
-    enabled. Please enable
-    Javascript and reload this page!</h2></noscript>
-<div id="main-content" class="container">
-        <div class="col-md-12">
-            <form class="form-inline">
-                <div class="form-group">
-<!--                     <label for="name">Counter</label> -->
+	<noscript>
+		<h2 style="color: #ff0000">Seems your browser doesn't support
+			Javascript! Websocket relies on Javascript being enabled. Please
+			enable Javascript and reload this page!</h2>
+	</noscript>
+	<div id="main-content" class="container">
+		<div class="col-md-12">
+			<form class="form-inline">
+				<div class="form-group">
 					<div class="col-sm-12">
 						<h2 id="counter" class="text-center">-</h2>
-<!--                     	<input type="text" id="name" class="form-control" placeholder="Your name here..."> -->
-                	</div>
-                </div>
-                <div class="col-sm-12">
-                	<button id="send" class="btn btn-default" type="submit">Click me!</button>
-                </div>
-            </form>
-        </div>
-    </div>
-    </form>
-</div>
+					</div>
+				</div>
+				<div class="col-sm-12">
+					<button id="send" class="btn btn-default" type="submit">Click
+						me!</button>
+				</div>
+			</form>
+		</div>
+	</div>
 </body>
 </html>
