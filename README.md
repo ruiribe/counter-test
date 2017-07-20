@@ -16,6 +16,7 @@ Simple application, that presents a Click Counter and updates every the counter,
 ### Startup
 #### Required to run:
 
+- Java (http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 - Maven (https://maven.apache.org/install.html)
 - Docker (https://docs.docker.com/engine/installation/)
 - Docker Compose (https://docs.docker.com/compose/install/)
