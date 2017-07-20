@@ -9,8 +9,8 @@ Simple application, that presents a Click Counter and updates every the counter,
 - Maven(v3)
 - Spring Boot(v1.5.2.RELEASE)
 - Mongo DB(v3.4.6)
-- Docker
-- Docker-compose
+- Docker(17.06.0-ce)
+- Docker-compose(v1.13.0))
 - BootStrap
 
 ### Startup
@@ -20,6 +20,17 @@ Simple application, that presents a Click Counter and updates every the counter,
 - Maven (https://maven.apache.org/install.html)
 - Docker (https://docs.docker.com/engine/installation/)
 - Docker Compose (https://docs.docker.com/compose/install/)
+
+#### Auto:
+...
+sh startup.sh
+...
+
+### Manual
+...
+mvn clean install -f ./counter-test/pom.xml
+docker-compose up
+...
 
 ### Webapp URL
 
