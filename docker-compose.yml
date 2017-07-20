@@ -1,16 +1,15 @@
 version: '2'
 services:
-  counter:
+  users:
     image: anapsix/alpine-java
-    ports:
-    - "80:9000"
+    #ports:
+    #- "91:9000"
     volumes:
-  - /home/ubuntu/counter-test/target/counter-test.jar:/home/ubuntu/counter-test/target/counter-test.jar 
-  command: ["java","-jar","/home/ubuntu/counter-test/target/counter-test.jar"]
+    - ./home/ubuntu/counter-test/target/counter-test.jar:/home/ubuntu/counter-test/target/counter-test.jar
+    command: ["java","-jar","/home/ubuntu/counter-test/target/counter-test.jar"]
     depends_on:
     - mongo
   mongo:
     image: mongo
     ports:
     - "27017"
- 
