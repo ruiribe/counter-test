@@ -5,8 +5,8 @@ services:
     #ports:
     #- "91:9000"
     volumes:
-    - /home/ubuntu/counter-test/target/counter-test.jar:/home/ubuntu/counter-test/target/counter-test.jar
-    command: ["java","-jar","/home/ubuntu/counter-test/target/counter-test.jar"]
+    - /home/ubuntu/counter-test/counter-test/target/counter-test.jar:/home/ubuntu/counter-test/counter-test/target/counter-test.jar
+    command: ["java","-jar","/home/ubuntu/counter-test/counter-test/target/counter-test.jar"]
     depends_on:
     - mongo
   mongo:
